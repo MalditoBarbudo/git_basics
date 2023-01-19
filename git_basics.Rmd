@@ -38,3 +38,37 @@ which everything worked again. With `git` you have the history of changes
 stored, you can see differences in files you modified, and when you modified it,
 and also you can go back easily to any point in that history.
 
+## What is GitHub
+
+GitHub is an online service that allows to have a remote copy of your `git`
+repository, making easier synchronising between computers. With GitHub, you
+always have an online resource with your work that can be pulled at any time
+from any computer you have access. More on this later.
+
+## Basic `git` usage
+
+![Mandatory xkcd comic](git.png)
+
+The `git` workflow is as follows:
+
+  1. You make changes
+  1. You `add` and `commit` those changes to `git` history
+  1. You `push` your changes to GitHub
+
+If you are developing in two different machines, then GitHub acts as a middleman
+for you to be able to get the latest changes you made:
+
+  1. You make changes
+  1. You `add` and `commit` those changes to `git` history
+  1. You `push` your changes to GitHub
+  1. You go on remote work, with your laptop
+  1. You `pull` the repository from GitHub
+  1. You make changes
+  1. You `add` and `commit` those changes to `git` history
+  1. You `push` your changes to GitHub
+  1. You go back to the office, with your work computer
+  1. You `pull` the repository from GitHub
+  1. You make changes
+  1. You `add` and `commit` those changes to `git` history
+  1. You `push` your changes to GitHub
+
