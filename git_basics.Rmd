@@ -137,19 +137,63 @@ Git/SVN menu:
   > If you have a project already created with files (scripts, data...) that you just want to
   start using `git` with, you can go directly to the `commit` step and follow from there.
 
-Let's create a file in our repository, called `my_script.R` with some boilerplate code:
+Let's create a file in our repository, called `my_script.R` with some boilerplate code and save it:
 
 ```{r, eval=FALSE}
+# calculate flower area index index
 library(dplyr)
 iris %>%
-  mutate(tururu = Sepal.Length * Petal.Length)
+  mutate(FAI = Sepal.Length * Petal.Length)
 ```
 
-and save it.
+If we go to the *git* tab in RStudio we can see something has changed. `my_script.R` appears now
+with unknown status. This means that a new file has appeared in the repository (our script) but
+`git` doesn't know yet what to do with it:
+
+![](new_file_in_repository.png)
+
+### Adding new files to `git`
+
+In the git tab in RStudio, we can check the `my_script.R` file checkbox, which tells `git` to `add`
+the file to the repository and start registering any change for that file:
+
+![](git_add.png)
+
+We can see that now the status has changed to `added` (bluish green A). We can do this for all the
+files we want to monitor at the same time.
+
+If we prefer to use the terminal, we can add files with `git add`:
+
+```
+git add my_script.R
+```
+
+### `commit` the changes
+
+To create a snapshot of the state of the files in any moment, we `commit` the changes after `add`ing
+them. In the git tab of RStudio we click the `Commit` button. This opens a windows in which we can
+write a `commit` description (the text that explains what the changes are about). This text should be
+descriptive of the changes we made, *i.e.* "my_script added, making some flower indexes" is better
+than "some code":
+
+![](git_commit_window.png)
+
+Now we have the changes recorded in our local git repository. We can continue making changes and
+`commit`ing them to the repository (adding more code to `my_script.R`, creating other scripts,
+saving plots, adding data...).
+
+#### Good practices with `commit`s
+
+  1. Every `commit` should have a description short but informative of the changes made.
+  1. `commit`s should be focused in specific changes. Big `commit`s that change multiple files, in
+  multiple locations, affecting different analyses... should be avoided.
+  
+![mandatory xkcd comic](git_commit_xkcd.png)
+
 
 ## Creating the GitHub repository
 
-To be able to use GitHub with our local `git` repository we just created, we need to create a
+To be able to use GitHub with our local `git` repository, we need to create a
 *remote* repository in GitHub. For that, we just click in the `New` button in our GitHub profile:
 
 ![](new_github_repository.png)
