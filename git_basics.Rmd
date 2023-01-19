@@ -1,0 +1,26 @@
+---
+title: "git basics"
+author: "vgranda"
+date: "2023-01-19"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Introduction
+
+`git` is a version control software, not the only one, but one of the most
+widely used. But, what is *version control*?  
+As the [git book](https://git-scm.com/book/en/v2) explains, version control
+systems allow to record the changes a file or a set of files have been through,
+allowing to revert files to a previous state, compare changes over time...  
+Version control systems, and `git` in particular, are designed with
+collaborative development in mind (a team working in the same codebase), but it
+doesn't mean it can't be used in *solo* projects, and in fact, is recommended.
+
+  > **Important!! `git` is not a backup system**. Is not intended to be a backup
+  system. Think of it more as a time machine for your code, but you should have
+  backup copies besides any version control system.
+
