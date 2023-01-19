@@ -116,3 +116,17 @@ Git/SVN menu:
 
 ### Creating the GitHub repository
 
+To be able to use GitHub with our local `git` repository we just created, we need to create a
+*remote* repository in GitHub. For that, we just click in the `New` button in our GitHub profile:
+
+![](new_github_repository.png)
+
+This will lead us to a page in which we indicate the name of the repository (the same as our
+project in RStudio) and without anything else, we click in `Create repository` button:
+
+![](create_github_repository.png)
+
+With the GitHub repository created, some instructions appear, we will follow the ones under
+`…or push an existing repository from the command line`. We can copy the commands in that section
+and paste them to the terminal to link our local repository with the GitHub repository.
+
