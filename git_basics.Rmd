@@ -130,7 +130,22 @@ Git/SVN menu:
 
 ![](project_options_git.png)
 
-### Creating the GitHub repository
+### Making changes and `commit`ing them
+
+  > If you have a project already created with files (scripts, data...) that you just want to
+  start using `git` with, you can go directly to the `commit` step and follow from there.
+
+Let's create a file in our repository, called `my_script.R` with some boilerplate code:
+
+```{r, eval=FALSE}
+library(dplyr)
+iris %>%
+  mutate(tururu = Sepal.Length * Petal.Length)
+```
+
+and save it.
+
+## Creating the GitHub repository
 
 To be able to use GitHub with our local `git` repository we just created, we need to create a
 *remote* repository in GitHub. For that, we just click in the `New` button in our GitHub profile:
@@ -172,3 +187,7 @@ branch 'main' set up to track 'origin/main'.
 And our local contents will be already present in the GitHub repository page:
 
 ![](code_in_github.png)
+
+
+
+
