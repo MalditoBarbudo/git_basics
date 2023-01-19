@@ -130,7 +130,9 @@ Git/SVN menu:
 
 ![](project_options_git.png)
 
-### Making changes and `commit`ing them
+## Using `git` like a pro
+
+### Making changes
 
   > If you have a project already created with files (scripts, data...) that you just want to
   start using `git` with, you can go directly to the `commit` step and follow from there.
