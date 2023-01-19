@@ -24,3 +24,17 @@ doesn't mean it can't be used in *solo* projects, and in fact, is recommended.
   system. Think of it more as a time machine for your code, but you should have
   backup copies besides any version control system.
 
+## How `git` works
+
+Think of `git` as a series of snapshots of the files. Every time we `commit`
+some changes, an image of the state of the files is stored. This allows to
+follow the development of the project (how things changed), but more
+importantly, it allows to go back to any point in the `commit` history.  
+
+Let's say that you are performing some analyses in your R project and something
+is not working as intended. You try to fix it, but at the end you have made so
+many changes to the analysis code that is impossible to revert to the state in
+which everything worked again. With `git` you have the history of changes
+stored, you can see differences in files you modified, and when you modified it,
+and also you can go back easily to any point in that history.
+
