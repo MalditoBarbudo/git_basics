@@ -79,6 +79,10 @@ for you to be able to get the latest changes you made:
 If you don't have a GitHub account yet, go to [github.com](github.com) and
 follow the page instructions to create a new account.
 
+  > Important! It's recommended to create the GitHub account with a personal mail. Institutional
+  mail addresses come and go, but this way you will be able to access GitHub even if you change
+  institutions/companies
+
 ### Installing `git`
 
 In Windows, go to https://git-scm.com/download/win and the download will start
@@ -88,6 +92,18 @@ In Mac, check at https://git-scm.com/download/mac if is not installed already.
 
 In linux, check your package manager (`dnf`, `apt`, `pacman`...) for the
 package available for your distribution.
+
+#### Configuring git for our user
+
+After installing `git` and having a GitHub account, we can configure our `git` installation with
+our username and mail, that way when we `push` (more on this later) to GitHub things will be easier
+to identify the author of the `commit`.
+For configuring `git` with our user, we just write in the terminal the following commands:
+
+```
+git config --global user.name "MyUser"
+git config --global user.email "my@mail.com"
+```
 
 ### Starting a git repository
 
@@ -128,5 +144,31 @@ project in RStudio) and without anything else, we click in `Create repository` b
 
 With the GitHub repository created, some instructions appear, we will follow the ones under
 `…or push an existing repository from the command line`. We can copy the commands in that section
-and paste them to the terminal to link our local repository with the GitHub repository.
+and paste them to the terminal to link our local repository with the GitHub repository:
 
+![](first_push.png)
+Doing this will result in our local repository linked with the GitHub remote one:
+
+```
+> git remote add origin https://github.com/MalditoBarbudo/git_basics.git
+> git branch -M main
+> git push -u origin main
+
+Username for 'https://github.com': MalditoBarbudo
+Password for 'https://MalditoBarbudo@github.com': 
+
+Enumerating objects: 22, done.
+Counting objects: 100% (22/22), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (21/21), done.
+Writing objects: 100% (22/22), 315.97 KiB | 9.87 MiB/s, done.
+Total 22 (delta 8), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (8/8), done.
+To https://github.com/MalditoBarbudo/git_basics.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+```
+
+And our local contents will be already present in the GitHub repository page:
+
+![](code_in_github.png)
