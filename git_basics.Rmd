@@ -2,7 +2,11 @@
 title: "git basics"
 author: "vgranda"
 date: "2023-01-19"
-output: html_document
+output: 
+  html_document: 
+    toc: yes
+  pdf_document: 
+    toc: yes
 ---
 
 ```{r setup, include=FALSE}
